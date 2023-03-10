@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <img src="./assets/images/bg-sidebar-desktop.svg" alt="">
+            <div class="steps-display">
+
+                <div class="container-step">
+                    <p class="step-number-circle">1</p>
+                    <div class="step-info">
+                        <p class="step-number">Step 1</p>
+                        <p class="step-topic"> Your info</p>
+                    </div>
+                </div>
+
+                <div class="container-step">
+                    <p class="step-number-circle">2</p>
+                    <div class="step-info">
+                        <p class="step-number">Step 2</p>
+                        <p class="step-topic">Select plan</p>
+                    </div>
+                </div>
+
+                <div class="container-step">
+                    <p class="step-number-circle">3</p>
+                    <div class="step-info">
+                        <p class="step-number">Step 3</p>
+                        <p class="step-topic">Add-ons</p>
+                    </div>
+                </div>
+
+                <div class="container-step">
+                    <p class="step-number-circle">4</p>
+                    <div class="step-info">
+                        <p class="step-number">Step 4</p>
+                        <p class="step-topic">Summary</p>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="form-container" id="form-container">
+
+            <form action="">
+                <div class="personal-info form-section" id="personal-info">
+                    <h2 class="stage-name">Personal info</h2>
+                    <p class="instructions">Please provide your name, email address, and phone number.</p>
+                    <div class="input-container">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="e.g. Stephen King">
+                        <span class="error-input">
+                            <p>This field cannot be empty</p>
+                        </span>
+                    </div>
+
+                    <div class="input-container" id="input-email">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" id="email-address" placeholder="e.g. stephenking@lorem.com">
+                        <span class="error-input">
+                            <p>This field cannot be empty</p>
+                        </span>
+                    </div>
+
+
+                    <div class="input-container">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="text" id="phone-number" placeholder="e.g. +1 234 567 890">
+                        <span class="error-input">
+                            <p>This field cannot be empty</p>
+                        </span>
+                    </div>
+
+
+                </div>
+
+                <div class="select-plan form-section">
+                    <h2 class="stage-name">Select your plan</h2>
+                    <p class="instructions">You have the option of monthly or yearly billing.</p>
+                    <div class="plans-options">
+
+                        <label class="single-plan-container arcade-plan" for="arcade">
+                            <input type="checkbox" id="arcade" value="arcade" />
+                            <div class="icon-plane-container">
+                                <img src="./assets/images/icon-arcade.svg" alt="">
+                            </div>
+                            <div class="plan-details">
+                                <p class="plan-name">arcade</p>
+                                <p class="plan-price">$9/mo</p>
+                            </div>
+                        </label>
+
+                        <label class="single-plan-container advanced-plan" for="advanced">
+                            <input type="checkbox" id="advanced" value="advanced" />
+                            <div class="icon-plane-container">
+                                <img src="./assets/images/icon-advanced.svg" alt="">
+                            </div>
+                            <div class="plan-details">
+                                <p class="plan-name">advanced</p>
+                                <p class="plan-price">$19/mo</p>
+                            </div>
+                        </label>
+
+                        <label class="single-plan-container pro-plan" for="pro">
+                            <input type="checkbox" id="pro" value="pro" />
+                            <div class="icon-plane-container">
+                                <img src="./assets/images/icon-pro.svg" alt="">
+                            </div>
+                            <div class="plan-details">
+                                <p class="plan-name">pro</p>
+                                <p class="plan-price">$29/mo</p>
+                            </div>
+                        </label>
+
+
+                    </div>
+
+                    <div class="time-subscribtion" for="time" id="label-time">
+                        <p class="monthly">monthly</p>
+
+                        <label class="switch">
+
+                            <input type="checkbox" value="monthly" id="time"/>
+                            <div class="slider"></div>
+
+                        </label>
+
+                        <p class="yearly">yearly</p>
+                    </div>
+
+                </div>
+
+                <div class="pick-upsales-container form-section">
+                    <h2 class="stage-name">Pick add-ons</h2>
+                    <p class="instructions">Add-ons help enhance your gamin experience.</p>
+                    <div id="upsales-options">
+
+                        <div class="single-upsale-option">
+                            <div class="upsale-details">
+                                <input type="checkbox"/>
+                                <div class="upsale-description">
+                                    <h3 class="upsale-topic">online service</h3>
+                                    <p class="upsale-explaintation">Access to multiplayer games</p>
+                                </div>
+                            </div>
+                            <p class="upsale-price">+$1/mo</p>
+                        </div>
+
+                        <div class="single-upsale-option">
+                            <div class="upsale-details">
+                                <input type="checkbox"/>
+                                <div class="upsale-description">
+                                    <h3 class="upsale-topic">larger storage</h3>
+                                    <p class="upsale-explaintation">extra 1tb of cloud save</p>
+                                </div>
+                            </div>
+                            <p class="upsale-price">+$2/mo</p>
+                        </div>
+
+                        <div class="single-upsale-option">
+                            <div class="upsale-details">
+                                <input type="checkbox"/>
+                                <div class="upsale-description">
+                                    <h3 class="upsale-topic">customizable profile</h3>
+                                    <p class="upsale-explaintation">custome theme on your profile</p>
+                                </div>
+                            </div>
+                            <p class="upsale-price">+$2/mo</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="finshing-up-container form-section">
+                    <h2 class="stage-name">finishing up</h2>
+                    <p class="instructions">Double-check everything looks OK before confirming.</p>
+
+                    <div class="payment-recap-container">
+                        <div class="basic-plane">
+                            <div class="chosen-plan">
+                                <p id="chosen-plan">plane name: </p>
+                                <a href="#">change</a>
+                            </div>
+                            <p class="plan-unique-price"></p>
+                        </div>
+
+                        <hr>
+                        <div class="extra-services">
+                         
+                        </div>
+                    </div>
+                    <div class="total">
+                        <p class="total-price">
+                             
+                        </p>
+
+                        <p class="total-price-number"></p>
+
+                    </div>
+                </div>
+
+
+                <div class="thank-you-section form-section">
+                    <img src="/assets/images/icon-thank-you.svg" alt="">
+                    <h2 class="stage-name">Thank you!</h2>
+                    <p class="instructions">Thanks for confirming your subscription! We hope you have fun
+                        using our platform. If you ever need support, please feel free
+                        to email us at support@loremgaming.com.</p>
+
+                </div>
+            </form>
+
+            <div class="btn-container" id="btn-container">
+                <button class="go-back-btn" id="go-back-btn">Go Back</button>
+                <button class="next-btn" id="next-btn">Next Step</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

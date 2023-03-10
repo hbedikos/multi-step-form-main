@@ -1,0 +1,444 @@
+/* @font-face {
+    font-family: "ubuntu";
+    src: url("./assets/fonts/Ubuntu-Bold.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* font-family: ubuntu; its not working with the font face */
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+
+    background-color: rgb(226, 221, 221);
+}
+
+.container {
+
+    display: flex;
+    align-items: center;
+    background: white;
+    gap: 5em;
+    padding: 1em;
+    border-radius: 20px;
+    width: 950px;
+
+
+}
+
+.steps-display {
+    position: absolute;
+    top: 11em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: white;
+
+
+
+}
+
+.step-number,
+.step-topic {
+    font-size: 0.4em;
+}
+
+.form-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 2em;
+    width: 55%;
+    height: 35em;
+
+
+}
+
+
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+
+}
+
+.step-number-circle {
+    border: 1px white solid;
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.stage-name {
+    color: var(--Marine-blue);
+    margin-bottom: 0.3em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.error-input {
+    color: red;
+    display: none;
+}
+
+.error-input-shown {
+    display: block;
+}
+
+.instructions {
+    margin-bottom: 2em;
+}
+
+
+.container-step {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+}
+
+.step-info>* {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+
+.step-number {
+    opacity: 0.5;
+    margin-bottom: 0.1em;
+}
+
+.step-topic {
+    font-weight: bold;
+    letter-spacing: 0.2em;
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0em 1em; */
+
+}
+
+.next-btn {
+    padding: 0.8em 2em;
+    color: white;
+    background-color: var(--Marine-blue);
+    border-radius: 0.5em
+}
+
+.go-back-btn {
+    border: none;
+    background-color: white;
+    color: grey;
+}
+
+label {
+    color: rgb(20, 20, 63);
+
+}
+
+input {
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid rgb(172, 172, 174);
+
+}
+
+.single-plan-container {
+    border: 1px solid var(--Light-gray);
+    border-radius: 5px;
+    height: 150px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.plan-name {
+    color: var(--Marine-blue);
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.plan-price {
+    color: var(--Cool-gray)
+}
+
+.plans-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+}
+
+.switch input {
+    opacity: 0;
+    ;
+}
+
+.switch {
+
+    width: 29px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    background-color: var(--Marine-blue);
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    background-color: var(--White);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+
+}
+
+.switch input:checked +.slider:before {
+
+    transform: translateX(15px);
+
+}
+
+.time-subscribtion {
+    background: var(--Alabaster);
+    display: flex;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+form>div {
+    margin-bottom: 50px;
+}
+
+.single-upsale-option {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.upsale-details {
+    display: flex;
+    flex: 1;
+    gap: 1.5em;
+    color: var(--Marine-blue);
+
+}
+
+.upsale-topic {
+
+    text-transform: capitalize;
+
+}
+
+.upsale-explaintation {
+    color: var(--Cool-gray)
+}
+
+.upsale-details input {
+    margin: 0px;
+    width: 1.5em;
+    cursor: pointer;
+
+
+}
+
+.upsale-price {
+    color: var(--Purplish-blue);
+    font-weight: bold;
+}
+
+
+.basic-plane {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-recap-container {
+    background-color: var(--Magnolia);
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.chosen-plan {
+    text-transform: capitalize;
+    color: var(--Marine-blue);
+    font-weight: bold;
+
+}
+
+.chosen-plan p {
+    margin-bottom: 0.2em;
+
+}
+
+.chosen-plan p {
+    font-weight: bold;
+    color: var(--Marine-blue);
+}
+
+.payment-recap-container a {
+    color: var(--Cool-gray);
+
+}
+
+hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.single-extra-service {
+    display: flex;
+    justify-content: space-between;
+}
+
+.extra-service-name {
+
+    flex: 1;
+}
+
+.extra-services {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.extra-service-name {
+    text-transform: capitalize;
+    color: var(--Cool-gray)
+}
+
+.extra-price {
+    font-size: 0.8em;
+    color: var(--Marine-blue);
+    font-weight: bold;
+
+}
+
+.go-back-btn,
+.next-btn {
+    cursor: pointer
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+}
+
+.total-price {
+    color: var(--Light-gray)
+}
+
+.total-price-number {
+    color: var(--Purplish-blue);
+    font-weight: bold;
+}
+
+.thank-you-section {
+    text-align: center;
+    width: 90%;
+    color: var(--Cool-gray)
+        /* border: 2px solid red; */
+}
+
+.thank-you-section>* {
+    margin-bottom: 1em;
+}
+
+.thank-you-section .instructions {
+    line-height: 1.5em;
+
+}
+
+.form-section {
+    display: none;
+    /* max-height: 500px; */
+
+}
+
+.active {
+    display: block;
+}
+
+.btns-gone {
+
+    display: none;
+}
+
+.back-btn-gone {
+    opacity: 0;
+
+}
+
+#pro,
+#advanced,
+#arcade {
+    display: none;
+}
+
+.red-bg {
+    background-color: red;
+}
+
+.chosen-plan-marked {
+    border: 3px solid rgb(22, 22, 86)
+}
+
+/* 
+#label-time {
+    border: 2px solid red; 
+    width: 200px;
+    height: 200px;
+} */
